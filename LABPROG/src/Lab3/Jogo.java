@@ -1,6 +1,6 @@
 /* Universidade Estadual da Paraíba
 *  Atividade de Laboratório nº03 - Prof.: Daniel Gondim
-*  Aluno: Andécio Araujo
+*  Alunos: Andécio Araujo - Kelvin Vandik
  */
 package Lab3;
 public class Jogo {
@@ -11,14 +11,6 @@ public class Jogo {
                 table[i][p] = ' ';
             }
         }
-    }
-    public boolean verificarSlot(int linha, int coluna) {
-        if ((linha > 2 || coluna > 2) || (linha < 0 || coluna < 0)) {
-            return true;
-        } else if (table[linha][coluna] == 'X' || table[linha][coluna] == 'O') {
-            return true;
-        }
-        return false;
     }
     public boolean verificarSlotValido(int linha, int coluna) {
         if ((linha < 1 || linha > 3) || (coluna < 1 || coluna > 3)) {
@@ -69,6 +61,14 @@ public class Jogo {
         } else {
             return false;
         }
+    }
+    public boolean verificarSlot(int linha, int coluna) {
+        if ((linha > 2 || coluna > 2) || (linha < 0 || coluna < 0)) {
+            return true;
+        } else if (table[linha][coluna] == 'X' || table[linha][coluna] == 'O') {
+            return true;
+        }
+        return false;
     }
     public boolean verificarEmpate() {
         for (int i = 0; i < 3; i++) {
